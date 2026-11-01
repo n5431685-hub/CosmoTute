@@ -1,131 +1,53 @@
 # 🪐 CosmoTute — Adaptive Learning Engine
 
-**India-focused adaptive assessment for Class 6–10 students, powered by Bayesian Knowledge Tracing (BKT)**
+**India-focused adaptive assessment for Classes 6–10, powered by Bayesian Knowledge Tracing**
 
-Built for hackathon demo. Class 8 Math seed data included (8 skills, 28 questions, 5 demo students).
+Built for Code Kernel '26 (X-Kernel, GRIET) — Decode & Build rounds.
 
----
+[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
 
-## Quick Start (2 terminals)
-
-### Terminal 1 — Backend
-```bash
-cd backend
-pip install fastapi uvicorn sqlmodel pyBKT numpy pandas pydantic httpx pytest
-python seed/seed_db.py        # seed the database once
-uvicorn app.main:app --reload --port 8000
-```
-
-
-### Terminal 2 — Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
+**🎥 Demo video:** [YouTube link](https://youtu.be/YOUR_VIDEO_ID)
+**🌐 Live deployment:** [link, if hosted — otherwise remove this line]
 
 ---
 
-## Run Tests
-```bash
-# From project root
-python -m pytest tests/ -v
-```
-Expected: **57 passed** ✅
+## The Problem
 
----
+Every Indian classroom moves at one pace — fast learners get bored, strugglers
+fall behind, and gaps from Class 6–7 silently compound by the time board-exam
+pressure hits in Class 10. Teachers want to help everyone but can't see who
+needs what in a full classroom. Most adaptive-learning apps are built for
+other markets and ignore India's reality: multiple boards and syllabi, large
+class sizes, many languages, and uneven device/internet access.
 
-## Architecture
+## Our Idea
 
-```
-CosmoTute/
-├── backend/
-│   ├── app/
-│   │   ├── core/
-│   │   │   ├── bkt.py              ← BKT HMM forward-pass engine
-│   │   │   ├── question_selector.py← Adaptive difficulty selector
-│   │   │   └── error_tagger.py     ← Conceptual/Careless/Language-confusion tagger
-│   │   ├── models/
-│   │   │   ├── db.py               ← SQLModel tables (SQLite)
-│   │   │   └── schemas.py          ← Pydantic API schemas
-│   │   ├── routers/
-│   │   │   ├── answers.py          ← POST /api/answer
-│   │   │   ├── questions.py        ← GET /api/next-question/{student}/{skill}
-│   │   │   ├── students.py         ← GET /api/students + mastery
-│   │   │   ├── skills.py           ← GET /api/skills
-│   │   │   └── dashboard.py        ← GET /api/dashboard/*
-│   │   ├── services/
-│   │   │   ├── bkt_service.py      ← BKT orchestration + DB
-│   │   │   └── dashboard_service.py← Heatmap + flag aggregation
-│   │   └── main.py                 ← FastAPI app
-│   └── seed/
-│       ├── skills.json             ← 8 Class-8 skills with BKT params
-│       ├── questions.json          ← 28 questions (difficulty 1/2/3)
-│       ├── students.json           ← 5 Indian student profiles
-│       └── seed_db.py              ← Database seeder
-├── tests/
-│   ├── test_bkt_math.py            ← 32 unit tests: BKT formulas
-│   └── test_bkt_simulation.py      ← 25 simulation tests
-└── frontend/
-    └── src/
-        ├── api/client.ts           ← Typed API client
-        ├── pages/
-        │   ├── StudentApp.tsx      ← Learn/Solve/Test mode UI
-        │   └── TeacherDashboard.tsx← Heatmap + flags + error charts
-        └── App.tsx                 ← Landing + role selector
-```
+CosmoTute continuously tracks what each student actually understands —
+skill by skill — using **Bayesian Knowledge Tracing (BKT)**, the same
+probabilistic model used in systems like Khan Academy and ALEKS. Instead of
+one end-of-chapter test, every question answered anywhere in the app updates
+a live mastery estimate, so the system always knows where a student stands.
 
----
+### How it adapts across Learn, Solve, Test
 
-## BKT Model
-
-Each skill has 4 hidden Markov parameters:
-
-| Param | Meaning |
+| Phase | How CosmoTute adapts |
 |---|---|
-| P(L₀) | Initial mastery probability |
-| P(T) | Learning rate (unmastered → mastered) |
-| P(S) | Slip (mastered student answers wrong) |
-| P(G) | Guess (unmastered student answers correctly) |
+| **Learn** | Checks mastery of prerequisite skills before a new topic; auto-recaps a weak prerequisite instead of letting gaps compound |
+| **Solve** | Picks question difficulty live based on current mastery probability — moves a student up or down the difficulty ladder after every answer, not after a block of questions |
+| **Test** | No single high-stakes test — mastery is assessed continuously and shown as a per-skill confidence score |
 
-**Update rule per answer:**
-1. Bayesian posterior: P(L | obs) using Bayes' theorem
-2. Learning step: P(L_next) = P(L | obs) + (1 - P(L | obs)) × P(T)
+### Beyond right/wrong: error-type tagging
 
----
+Wrong answers are classified as **conceptual gap**, **careless slip**, or
+**language/translation confusion** — directly addressing the brief's "many
+languages" problem, where a student can be mathematically fine but trip on
+a word problem phrased differently from how they think in their first
+language.
 
-## API Endpoints
+### Empowering the teacher, not replacing them
 
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/api/answer` | Submit answer → BKT update |
-| GET | `/api/next-question/{sid}/{skill_id}` | Adaptive question selection |
-| GET | `/api/students` | List students |
-| GET | `/api/students/{id}/mastery` | Per-skill mastery for student |
-| GET | `/api/skills` | List skills |
-| GET | `/api/dashboard/heatmap` | Skill × student mastery grid |
-| GET | `/api/dashboard/flags` | At-risk students |
-| GET | `/api/dashboard/errors/{id}` | Error breakdown per student |
+The teacher dashboard shows a skill × student mastery heatmap and flags
+students who need attention — and why. The engine never auto-teaches; it
+only surfaces insight so the teacher decides the intervention.
 
----
-
-## Error Types
-
-| Type | Trigger |
-|---|---|
-| **Conceptual** | Wrong on easy Q, low mastery → fundamental gap |
-| **Careless** | Wrong on hard Q, high mastery → silly mistake |
-| **Language Confusion** | Answer matches India-specific L1 interference pattern (lakh/million, SI formula direction, etc.) |
-
----
-
-## Demo Students
-
-| Name | Profile | School |
-|---|---|---|
-| Aarav Sharma | Strong student | DPS Noida |
-| Priya Nair | Average | KV Bangalore |
-| Rohan Mehta | Struggling | St Xavier's Mumbai |
-| Sneha Reddy | Strong algebra, weak geometry | Narayana Hyderabad |
-| Kiran Patel | New student | Amreli Ahmedabad |
+## Tech Stack
