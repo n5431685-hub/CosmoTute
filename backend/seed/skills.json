@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Rational Numbers – Operations",
+    "description": "Addition, subtraction, multiplication and division of rational numbers including negative fractions.",
+    "chapter": "Chapter 1 – Rational Numbers",
+    "class": 8,
+    "p_l0": 0.10,
+    "p_t": 0.30,
+    "p_s": 0.10,
+    "p_g": 0.20
+  },
+  {
+    "id": 2,
+    "name": "Linear Equations in One Variable",
+    "description": "Solving linear equations with one variable including word problems.",
+    "chapter": "Chapter 2 – Linear Equations",
+    "class": 8,
+    "p_l0": 0.15,
+    "p_t": 0.25,
+    "p_s": 0.12,
+    "p_g": 0.18
+  },
+  {
+    "id": 3,
+    "name": "Understanding Quadrilaterals",
+    "description": "Properties of parallelograms, rhombuses, rectangles, squares and trapezoids.",
+    "chapter": "Chapter 3 – Understanding Quadrilaterals",
+    "class": 8,
+    "p_l0": 0.20,
+    "p_t": 0.20,
+    "p_s": 0.08,
+    "p_g": 0.15
+  },
+  {
+    "id": 4,
+    "name": "Squares and Square Roots",
+    "description": "Finding squares, square roots using prime factorisation, long division, and properties.",
+    "chapter": "Chapter 6 – Squares and Square Roots",
+    "class": 8,
+    "p_l0": 0.12,
+    "p_t": 0.28,
+    "p_s": 0.10,
+    "p_g": 0.22
+  },
+  {
+    "id": 5,
+    "name": "Cubes and Cube Roots",
+    "description": "Perfect cubes, cube roots using prime factorisation and estimation.",
+    "chapter": "Chapter 7 – Cubes and Cube Roots",
+    "class": 8,
+    "p_l0": 0.10,
+    "p_t": 0.25,
+    "p_s": 0.10,
+    "p_g": 0.18
+  },
+  {
+    "id": 6,
+    "name": "Comparing Quantities",
+    "description": "Percentages, profit and loss, simple interest, compound interest, discounts.",
+    "chapter": "Chapter 8 – Comparing Quantities",
+    "class": 8,
+    "p_l0": 0.25,
+    "p_t": 0.30,
+    "p_s": 0.12,
+    "p_g": 0.20
+  },
+  {
+    "id": 7,
+    "name": "Algebraic Expressions and Identities",
+    "description": "Monomials, polynomials, multiplying expressions, standard algebraic identities.",
+    "chapter": "Chapter 9 – Algebraic Expressions",
+    "class": 8,
+    "p_l0": 0.15,
+    "p_t": 0.22,
+    "p_s": 0.10,
+    "p_g": 0.16
+  },
+  {
+    "id": 8,
+    "name": "Mensuration",
+    "description": "Area of polygons, surface area and volume of cubes, cuboids and cylinders.",
+    "chapter": "Chapter 11 – Mensuration",
+    "class": 8,
+    "p_l0": 0.20,
+    "p_t": 0.25,
+    "p_s": 0.10,
+    "p_g": 0.18
+  }
+]

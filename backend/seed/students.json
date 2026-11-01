@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Sharma",
+    "grade": 8,
+    "school": "Delhi Public School, Noida",
+    "avatar": "🧑‍🎓"
+  },
+  {
+    "id": 2,
+    "name": "Priya Nair",
+    "grade": 8,
+    "school": "Kendriya Vidyalaya, Bangalore",
+    "avatar": "👩‍🎓"
+  },
+  {
+    "id": 3,
+    "name": "Rohan Mehta",
+    "grade": 8,
+    "school": "St. Xavier's, Mumbai",
+    "avatar": "🧒"
+  },
+  {
+    "id": 4,
+    "name": "Sneha Reddy",
+    "grade": 8,
+    "school": "Narayana School, Hyderabad",
+    "avatar": "👧"
+  },
+  {
+    "id": 5,
+    "name": "Kiran Patel",
+    "grade": 8,
+    "school": "Amreli Vidyalaya, Ahmedabad",
+    "avatar": "🧑"
+  }
+]

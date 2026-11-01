@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "skill_id": 1,
+    "difficulty": 1,
+    "text": "What is the sum of 3/4 and 1/4?",
+    "options": ["1", "4/8", "2/4", "1/2"],
+    "correct_answer": "1",
+    "explanation": "3/4 + 1/4 = 4/4 = 1. Numerators add when denominators are equal.",
+    "error_hints": []
+  },
+  {
+    "id": 2,
+    "skill_id": 1,
+    "difficulty": 1,
+    "text": "Simplify: -2/3 + 1/3",
+    "options": ["-1/3", "1/3", "-1", "3/3"],
+    "correct_answer": "-1/3",
+    "explanation": "-2/3 + 1/3 = (-2+1)/3 = -1/3",
+    "error_hints": []
+  },
+  {
+    "id": 3,
+    "skill_id": 1,
+    "difficulty": 2,
+    "text": "What is (-3/5) × (10/9)?",
+    "options": ["-2/3", "2/3", "-30/45", "6/45"],
+    "correct_answer": "-2/3",
+    "explanation": "(-3 × 10)/(5 × 9) = -30/45 = -2/3 after simplification.",
+    "error_hints": []
+  },
+  {
+    "id": 4,
+    "skill_id": 1,
+    "difficulty": 3,
+    "text": "Arrange in ascending order: -1/3, -2/7, 1/4, -3/5",
+    "options": ["-3/5, -1/3, -2/7, 1/4", "-1/3, -2/7, -3/5, 1/4", "1/4, -2/7, -1/3, -3/5", "-2/7, -1/3, -3/5, 1/4"],
+    "correct_answer": "-3/5, -1/3, -2/7, 1/4",
+    "explanation": "Convert to decimals: -0.6, -0.333, -0.286, 0.25. Ascending: -0.6 < -0.333 < -0.286 < 0.25",
+    "error_hints": []
+  },
+  {
+    "id": 5,
+    "skill_id": 2,
+    "difficulty": 1,
+    "text": "Solve: x + 5 = 12",
+    "options": ["7", "17", "5", "12"],
+    "correct_answer": "7",
+    "explanation": "x = 12 - 5 = 7",
+    "error_hints": []
+  },
+  {
+    "id": 6,
+    "skill_id": 2,
+    "difficulty": 1,
+    "text": "Solve: 3x = 21",
+    "options": ["7", "63", "18", "3"],
+    "correct_answer": "7",
+    "explanation": "x = 21 ÷ 3 = 7",
+    "error_hints": []
+  },
+  {
+    "id": 7,
+    "skill_id": 2,
+    "difficulty": 2,
+    "text": "Solve: 2x + 3 = 11",
+    "options": ["4", "7", "8", "5"],
+    "correct_answer": "4",
+    "explanation": "2x = 11 - 3 = 8, so x = 4",
+    "error_hints": []
+  },
+  {
+    "id": 8,
+    "skill_id": 2,
+    "difficulty": 3,
+    "text": "The sum of three consecutive integers is 51. Find the largest integer.",
+    "options": ["18", "17", "16", "19"],
+    "correct_answer": "18",
+    "explanation": "Let integers be n, n+1, n+2. Then 3n+3 = 51, n = 16. Largest = 18.",
+    "error_hints": []
+  },
+  {
+    "id": 9,
+    "skill_id": 3,
+    "difficulty": 1,
+    "text": "How many sides does a quadrilateral have?",
+    "options": ["4", "3", "5", "6"],
+    "correct_answer": "4",
+    "explanation": "Quadrilateral comes from 'quad' (4) + 'lateral' (sides).",
+    "error_hints": []
+  },
+  {
+    "id": 10,
+    "skill_id": 3,
+    "difficulty": 2,
+    "text": "In a parallelogram ABCD, if angle A = 70°, what is angle C?",
+    "options": ["70°", "110°", "90°", "180°"],
+    "correct_answer": "70°",
+    "explanation": "In a parallelogram, opposite angles are equal. So angle C = angle A = 70°.",
+    "error_hints": []
+  },
+  {
+    "id": 11,
+    "skill_id": 3,
+    "difficulty": 3,
+    "text": "The diagonals of a rhombus are 16 cm and 12 cm. Find its perimeter.",
+    "options": ["40 cm", "56 cm", "48 cm", "80 cm"],
+    "correct_answer": "40 cm",
+    "explanation": "Half-diagonals: 8 and 6. Side = √(8²+6²) = √100 = 10. Perimeter = 4×10 = 40 cm.",
+    "error_hints": []
+  },
+  {
+    "id": 12,
+    "skill_id": 4,
+    "difficulty": 1,
+    "text": "What is the square of 13?",
+    "options": ["169", "130", "156", "143"],
+    "correct_answer": "169",
+    "explanation": "13² = 13 × 13 = 169",
+    "error_hints": []
+  },
+  {
+    "id": 13,
+    "skill_id": 4,
+    "difficulty": 2,
+    "text": "Find the square root of 225 using prime factorisation.",
+    "options": ["15", "25", "45", "14"],
+    "correct_answer": "15",
+    "explanation": "225 = 3² × 5² = (3×5)² = 15²  →  √225 = 15",
+    "error_hints": []
+  },
+  {
+    "id": 14,
+    "skill_id": 4,
+    "difficulty": 3,
+    "text": "The area of a square field is 5184 m². A farmer runs around it. What is the distance covered?",
+    "options": ["288 m", "72 m", "576 m", "144 m"],
+    "correct_answer": "288 m",
+    "explanation": "Side = √5184 = 72 m. Perimeter = 4 × 72 = 288 m.",
+    "error_hints": []
+  },
+  {
+    "id": 15,
+    "skill_id": 5,
+    "difficulty": 1,
+    "text": "What is the cube of 4?",
+    "options": ["64", "12", "16", "48"],
+    "correct_answer": "64",
+    "explanation": "4³ = 4 × 4 × 4 = 64",
+    "error_hints": []
+  },
+  {
+    "id": 16,
+    "skill_id": 5,
+    "difficulty": 2,
+    "text": "Is 216 a perfect cube? If yes, find its cube root.",
+    "options": ["Yes, 6", "No", "Yes, 7", "Yes, 8"],
+    "correct_answer": "Yes, 6",
+    "explanation": "216 = 2³ × 3³ = (2×3)³ = 6³. So cube root of 216 = 6.",
+    "error_hints": ["language_confusion"]
+  },
+  {
+    "id": 17,
+    "skill_id": 5,
+    "difficulty": 3,
+    "text": "Find the smallest number by which 1323 must be multiplied to get a perfect cube.",
+    "options": ["3", "7", "9", "21"],
+    "correct_answer": "7",
+    "explanation": "1323 = 3³ × 7². We need one more 7 to make 7³. Multiply by 7.",
+    "error_hints": []
+  },
+  {
+    "id": 18,
+    "skill_id": 6,
+    "difficulty": 1,
+    "text": "What is 20% of 500?",
+    "options": ["100", "20", "50", "200"],
+    "correct_answer": "100",
+    "explanation": "20% of 500 = (20/100) × 500 = 100",
+    "error_hints": []
+  },
+  {
+    "id": 19,
+    "skill_id": 6,
+    "difficulty": 2,
+    "text": "A shopkeeper bought a shirt for ₹800 and sold it for ₹1000. What is the profit percent?",
+    "options": ["25%", "20%", "15%", "10%"],
+    "correct_answer": "25%",
+    "explanation": "Profit = 200. Profit% = (200/800)×100 = 25%",
+    "error_hints": ["language_confusion"]
+  },
+  {
+    "id": 20,
+    "skill_id": 6,
+    "difficulty": 3,
+    "text": "Find compound interest on ₹10,000 at 10% per annum for 2 years.",
+    "options": ["₹2100", "₹2000", "₹1000", "₹2500"],
+    "correct_answer": "₹2100",
+    "explanation": "A = 10000×(1.1)² = 12100. CI = 12100 - 10000 = ₹2100.",
+    "error_hints": ["language_confusion"]
+  },
+  {
+    "id": 21,
+    "skill_id": 7,
+    "difficulty": 1,
+    "text": "Simplify: 3x + 2x",
+    "options": ["5x", "6x", "5x²", "x⁵"],
+    "correct_answer": "5x",
+    "explanation": "Like terms: 3x + 2x = (3+2)x = 5x",
+    "error_hints": []
+  },
+  {
+    "id": 22,
+    "skill_id": 7,
+    "difficulty": 2,
+    "text": "Expand using identity: (a + 3)²",
+    "options": ["a² + 6a + 9", "a² + 9", "a² + 3a + 9", "a² + 6a + 3"],
+    "correct_answer": "a² + 6a + 9",
+    "explanation": "(a+b)² = a² + 2ab + b². Here b=3: a² + 2(a)(3) + 3² = a² + 6a + 9",
+    "error_hints": []
+  },
+  {
+    "id": 23,
+    "skill_id": 7,
+    "difficulty": 3,
+    "text": "Using identity, find 103²",
+    "options": ["10609", "10306", "10206", "10503"],
+    "correct_answer": "10609",
+    "explanation": "103² = (100+3)² = 10000 + 600 + 9 = 10609",
+    "error_hints": []
+  },
+  {
+    "id": 24,
+    "skill_id": 8,
+    "difficulty": 1,
+    "text": "Find the area of a rectangle with length 8 cm and breadth 5 cm.",
+    "options": ["40 cm²", "26 cm²", "13 cm²", "40 cm"],
+    "correct_answer": "40 cm²",
+    "explanation": "Area = length × breadth = 8 × 5 = 40 cm²",
+    "error_hints": []
+  },
+  {
+    "id": 25,
+    "skill_id": 8,
+    "difficulty": 2,
+    "text": "The perimeter of a square is 36 cm. Find its area.",
+    "options": ["81 cm²", "36 cm²", "18 cm²", "9 cm²"],
+    "correct_answer": "81 cm²",
+    "explanation": "Side = 36/4 = 9 cm. Area = 9² = 81 cm²",
+    "error_hints": []
+  },
+  {
+    "id": 26,
+    "skill_id": 8,
+    "difficulty": 3,
+    "text": "A cylindrical tank has radius 7 m and height 3 m. Find its volume. (Use π = 22/7)",
+    "options": ["462 m³", "154 m³", "132 m³", "308 m³"],
+    "correct_answer": "462 m³",
+    "explanation": "V = πr²h = (22/7) × 7² × 3 = (22/7) × 49 × 3 = 22 × 7 × 3 = 462 m³",
+    "error_hints": []
+  },
+  {
+    "id": 27,
+    "skill_id": 2,
+    "difficulty": 2,
+    "text": "A number is doubled and 5 is added. The result is 21. Find the number.",
+    "options": ["8", "7", "6", "10"],
+    "correct_answer": "8",
+    "explanation": "2x + 5 = 21 → 2x = 16 → x = 8",
+    "error_hints": []
+  },
+  {
+    "id": 28,
+    "skill_id": 6,
+    "difficulty": 2,
+    "text": "Simple interest on ₹5000 at 8% per annum for 3 years is?",
+    "options": ["₹1200", "₹1000", "₹800", "₹1500"],
+    "correct_answer": "₹1200",
+    "explanation": "SI = (P×R×T)/100 = (5000×8×3)/100 = ₹1200",
+    "error_hints": ["language_confusion"]
+  }
+]
