@@ -15,7 +15,7 @@ pip install fastapi uvicorn sqlmodel pyBKT numpy pandas pydantic httpx pytest
 python seed/seed_db.py        # seed the database once
 uvicorn app.main:app --reload --port 8000
 ```
-API docs → http://localhost:8000/docs
+
 
 ### Terminal 2 — Frontend
 ```bash
@@ -23,7 +23,7 @@ cd frontend
 npm install
 npm run dev
 ```
-App → http://localhost:5173
+
 
 ---
 
